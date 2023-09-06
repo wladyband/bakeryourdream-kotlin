@@ -52,6 +52,7 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
 }
 
 dependencies {
@@ -72,53 +73,34 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+    implementation ("androidx.compose.material:material:1.5.0")
+
+    // Kotlinx Serialization
+    implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
+
+    // Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+    implementation("com.squareup.okhttp3:okhttp-urlconnection:4.4.1")
+
     // Compose Navigation
-    implementation ("androidx.navigation:navigation-compose:2.5.3")
+    implementation("androidx.navigation:navigation-compose:2.5.0-beta01")
 
     // Google Auth
-    implementation ("com.google.android.gms:play-services-auth:20.7.0")
+    implementation ("com.google.android.gms:play-services-auth:20.2.0")
 
-
-    //material icons - use with caution!
-    implementation ("androidx.compose.material:material-icons-extended:1.5.0")
-
-
-    // Coroutines
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.2")
-
-    //Injeção de dependências com o Hilt
+    // Dagger - Hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
     implementation ("androidx.hilt:hilt-navigation-compose:1.0.0-alpha03")
 
-
-    // Coil
-    implementation("io.coil-kt:coil-compose:2.4.0")
-
-
-    // OkHttp
-    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
-
-    // JSON Converter
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-
-
-    //firebase auth and firestore
-    implementation(platform("com.google.firebase:firebase-bom:32.2.0"))
-    implementation ("com.google.firebase:firebase-auth-ktx")
-
-    implementation ("com.google.firebase:firebase-firestore-ktx")
-
     // DataStore Preferences
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
+    // Coil
+    implementation("io.coil-kt:coil-compose:2.0.0")
 
     implementation(platform("com.google.firebase:firebase-bom:32.2.2"))
 
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.0")
-    implementation ("androidx.lifecycle:lifecycle-runtime-compose:2.6.0")
-    implementation ("androidx.navigation:navigation-compose:2.5.3")
-    implementation ("io.coil-kt:coil-compose:2.2.2")
 }
