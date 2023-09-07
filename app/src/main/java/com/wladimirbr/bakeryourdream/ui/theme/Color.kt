@@ -1,6 +1,6 @@
 package com.wladimirbr.bakeryourdream.ui.theme
 
-import android.provider.CalendarContract.Colors
+import androidx.compose.material.Colors
 import androidx.compose.ui.graphics.Color
 
 val Gray200 = Color(0xFF819ca9)
@@ -10,4 +10,10 @@ val Teal200 = Color(0xFF03DAC5)
 val ErrorRed = Color(0xFFFF6C60)
 val InfoGreen = Color(0xFF00C096)
 val LoadingBlue = Color(0xFF1A73E8)
+
+val Colors.topAppBarContentColor: Color
+    get() = if (isLight) Color.White else Color.LightGray
+
+val Colors.topAppBarBackgroundColor: Color
+    get() = if (isLight) Gray500 else Color.Black
 

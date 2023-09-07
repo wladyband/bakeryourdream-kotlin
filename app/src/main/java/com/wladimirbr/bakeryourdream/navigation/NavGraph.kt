@@ -8,7 +8,7 @@ import coil.annotation.ExperimentalCoilApi
 import com.wladimirbr.bakeryourdream.screens.login.LoginScreen
 import com.wladimirbr.bakeryourdream.screens.profile.ProfileScreen
 
-
+@ExperimentalCoilApi
 @Composable
 fun SetupNavGraph(navController: NavHostController) {
     NavHost(
