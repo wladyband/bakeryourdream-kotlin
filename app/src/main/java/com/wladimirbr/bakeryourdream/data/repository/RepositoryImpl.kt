@@ -21,24 +21,4 @@ class RepositoryImpl @Inject constructor(
         return dataStoreOperations.readSignedInState()
     }
 
-    override suspend fun verifyTokenOnBackend(request: ApiRequest): ApiResponse {
-        TODO("Not yet implemented")
-    }
-
-    override suspend fun getUserInfo(): ApiResponse {
-        TODO("Not yet implemented")
-    }
-
-    override suspend fun updateUser(userUpdate: UserUpdate): ApiResponse {
-        TODO("Not yet implemented")
-    }
-
-    override suspend fun deleteUser(): ApiResponse {
-        TODO("Not yet implemented")
-    }
-
-    override suspend fun clearSession(): ApiResponse {
-        TODO("Not yet implemented")
-    }
-
 }

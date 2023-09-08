@@ -53,23 +53,7 @@ class LoginViewModel @Inject constructor(
         )
     }
 
-    fun verifyTokenOnBackend(request: ApiRequest) {
-        Log.d("LoginViewModel", request.tokenId)
-        _apiResponse.value = RequestState.Loading
-        try {
-            viewModelScope.launch(Dispatchers.IO) {
-                val response = repository.verifyTokenOnBackend(request = request)
-                _apiResponse.value = RequestState.Success(response)
-                _messageBarState.value = MessageBarState(
-                    message = response.message,
-                    error = response.error
-                )
-            }
-        } catch (e: Exception) {
-            _apiResponse.value = RequestState.Error(e)
-            _messageBarState.value = MessageBarState(error = e)
-        }
-    }
+
 
 }
 
